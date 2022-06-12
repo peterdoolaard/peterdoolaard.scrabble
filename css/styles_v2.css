@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+  border: calc(1rem / 8) solid black;
+  /*max-width: min-content;*/
+}
+
+.bord-boven {
+  display: grid;
+  grid-template-columns: repeat(15, 4.25rem);
+  grid-template-rows: repeat(15, 4.25rem);
+  grid-gap: .25rem;
+  margin: 2px;
+}
+
+.letter {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  margin: 1px;
+  padding: .5rem;
+  position: relative;
+  background-color: hsl(33, 100%, 88%);
+  box-shadow: 1px 1px 4px hsl(33, 100%, 20%);
+  color: hsl(33, 0%, 5%);
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  transform: translate(-1500px, -1500px); /* eerst alle letters buiten beeld plaatsen */
+}
+
+.letter::before {
+  content: attr(data-letter);
+}
+
+.letter::after {
+  content: attr(data-waarde);
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  font-size: 50%;
+}
+
+.letter:hover {
+  opacity: .1;
+  transition: opacity .2s ease-in-out;
+}
+
+.letter:not(:hover) {
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+
+.letter:nth-child(1) {
+  grid-area: 2 / 2;
+  animation: drop-letter .5s ease-in-out forwards;
+}
+
+.letter:nth-child(2) {
+  grid-area: 2 / 3;
+  animation: drop-letter .5s ease-in-out .2s forwards;
+}
+
+.letter:nth-child(3) {
+  grid-area: 2 / 4;
+  animation: drop-letter .5s ease-in-out .4s forwards;
+}
+
+.letter:nth-child(4) {
+  grid-area: 2 / 5;
+  animation: drop-letter .5s ease-in-out .6s forwards;
+}
+
+.letter:nth-child(5) {
+  grid-area: 2 / 6;
+  animation: drop-letter .5s ease-in-out .8s forwards;
+}
+
+.letter:nth-child(6) {
+  grid-area: 2 / 7;
+  animation: drop-letter .5s ease-in-out 1s forwards;
+}
+
+.letter:nth-child(7) {
+  grid-area: 2 / 8;
+  animation: drop-letter .5s ease-in-out 1.2s forwards;
+}
+
+.letter:nth-child(8) {
+  grid-area: 2 / 9;
+  animation: drop-letter .5s ease-in-out 1.4s forwards;
+}
+
+.letter:nth-child(9) {
+  grid-area: 2 / 10;
+  animation: drop-letter .5s ease-in-out 1.6s forwards;
+}
+
+.letter:nth-child(10) {
+  grid-area: 1 / 8;
+  animation: drop-letter .5s ease-in-out 2.0s forwards;
+}
+
+.letter:nth-child(11) {
+  grid-area: 3 / 8;
+  animation: drop-letter .5s ease-in-out 2.2s forwards;
+}
+
+.letter:nth-child(12) {
+  grid-area: 4 / 8;
+  animation: drop-letter .5s ease-in-out 2.4s forwards;
+}
+
+.letter:nth-child(13) {
+  grid-area: 5 / 8;
+  animation: drop-letter .5s ease-in-out 2.6s forwards;
+}
+
+.letter:nth-child(14) {
+  grid-area: 6 / 8;
+  animation: drop-letter .5s ease-in-out 2.8s forwards;
+}
+
+.letter:nth-child(15) {
+  grid-area: 7 / 8;
+  animation: drop-letter .5s ease-in-out 3.0s forwards;
+}
+
+.letter:nth-child(16) {
+  grid-area: 8 / 8;
+  animation: drop-letter .5s ease-in-out 3.2s forwards;
+}
+
+.letter:nth-child(17) {
+  grid-area: 9 / 8;
+  animation: drop-letter .5s ease-in-out 3.4s forwards;
+}
+
+.letter:nth-child(18) {
+  grid-area: 10 / 8;
+  animation: drop-letter .5s ease-in-out 3.6s forwards;
+}
+
+.letter:nth-child(19) {
+  grid-area: 11 / 8;
+  animation: drop-letter .5s ease-in-out 3.8s forwards;
+}
+
+.letter:nth-child(20) {
+  grid-area: 12 / 8;
+  animation: drop-letter .5s ease-in-out 4.0s forwards;
+}
+
+.letter:nth-child(21) {
+  grid-area: 13 / 8;
+  animation: drop-letter .5s ease-in-out 4.2s forwards;
+}
+
+.letter:nth-child(22) {
+  grid-area: 14 / 8;
+  animation: drop-letter .5s ease-in-out 4.4s forwards;
+}
+
+.letter:nth-child(23) {
+  grid-area: 7 / 3;
+  animation: drop-letter .5s ease-in-out 4.6s forwards;
+}
+
+.letter:nth-child(24) {
+  grid-area: 7 / 4;
+  animation: drop-letter .5s ease-in-out 4.8s forwards;
+}
+
+.letter:nth-child(25) {
+  grid-area: 7 / 5;
+  animation: drop-letter .5s ease-in-out 5.0s forwards;
+}
+
+.letter:nth-child(26) {
+  grid-area: 7 / 6;
+  animation: drop-letter .5s ease-in-out 5.2s forwards;
+}
+
+.letter:nth-child(27) {
+  grid-area: 7 / 7;
+  animation: drop-letter .5s ease-in-out 5.4s forwards;
+}
+
+.letter:nth-child(28) {
+  grid-area: 7 / 9;
+  animation: drop-letter .5s ease-in-out 5.8s forwards;
+}
+
+.letter:nth-child(29) {
+  grid-area: 7 / 10;
+  animation: drop-letter .5s ease-in-out 6.0s forwards, dump-letter .75s ease-in 7.4s forwards;
+}
+
+.letter:nth-child(30) {
+  grid-area: 7 / 11;
+  animation: drop-letter .5s ease-in-out 6.2s forwards;
+}
+
+.letter:nth-child(31) {
+  grid-area: 7 / 10;
+  animation: drop-letter .5s ease-in-out 7.4s forwards;
+}
+
+/* animatie van de letters */
+@keyframes drop-letter {
+  0% {
+    transform: translate(-1500px, -1500px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes dump-letter {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(1500px, -1500px);
+  }
+}
+
+/* speelbord en speciale vakjes */
+.bord-onder {
+  position: absolute;
+  top: 0;
+  margin: 2px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  grid-gap: .25rem;
+  z-index: -10;
+}
+
+.bord-onder > * {
+  background-color: lightgrey;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-variant: small-caps;
+}
+
+[data-bonus]:before {
+  content: attr(data-bonus);
+}
+
+[data-bonus^="3 x woord"] {
+  background-color: red;
+  box-shadow: 0 0 2px 1px red;
+}
+
+[data-bonus^="2 x woord"] {
+  background-color: lightpink;
+  box-shadow: 0 0 2px 1px lightpink;
+}
+
+[data-bonus^="2 x letter"] {
+  background-color: lightskyblue;
+  box-shadow: 0 0 2px 1px lightskyblue;
+}
+
+[data-bonus^="3 x letter"] {
+  background-color: cornflowerblue;
+  box-shadow: 0 0 2px 1px cornflowerblue;
+}
+
+[data-bonus="ster"] {
+  background-color: lightpink;
+  box-shadow: 0 0 2px 1px lightpink;
+}
+
+[data-bonus="ster"]:before {
+  content: url(../images/ster.svg);
+}
+
+
