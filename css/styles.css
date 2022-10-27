@@ -3,22 +3,21 @@
 }
 
 body {
+  display: flex;
   margin: 0;
   overflow-x: hidden;
+  place-content: center;
 }
 
 .buitengrid {
-  align-content: start;
-  display: grid;
-  grid-template-columns: minmax(320px, 1020px);
-  grid-template-rows: minmax(320px, 1020px);
-  justify-content: start;
-  place-content: center;
+  display: grid; /* zodat speelbord en letterbord op elkaar kunnen liggen */
+  grid-template-columns: minmax(320px, 1fr);
+  grid-template-rows: minmax(320px, 1fr);
   margin: 2px;
   max-inline-size: 1020px;
 }
 
-.speelbord {
+.speelbord, .lettergrid {
   align-items: center;
   display: grid;
   grid-area: 1 / 1;
@@ -28,41 +27,32 @@ body {
 }
 
 .speelbord > * {
-  background-color: lightgrey;
-  height: 4rem;
-  width: 4rem;
-  display: flex;
   align-items: center;
-  text-align: center;
+  background-color: lightgrey;
+  block-size: 4rem;
+  display: flex;
+  inline-size: 4rem;
   font-family: sans-serif;
   font-variant: small-caps;
-}
-
-.lettergrid {
-  display: grid;
-  grid-area: 1 / 1;
-  grid-template-columns: repeat(15, 4.25rem);
-  grid-template-rows: repeat(15, 4.25rem);
-  align-items: center;
-  justify-items: center;
+  text-align: center;
 }
 
 .letter {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 4rem;
-  width: 4rem;
-  margin: 1px;
-  padding: .5rem;
-  position: relative;
   background-color: hsl(33, 100%, 88%);
+  block-size: 4rem;
   box-shadow: 1px 1px 4px hsl(33, 100%, 20%);
   color: hsl(33, 0%, 5%);
   cursor: pointer;
+  display: flex;
   font-size: 2rem;
-  text-transform: capitalize;
   font-variant: small-caps;
+  inline-size: 4rem;
+  justify-content: center;
+  margin: 1px;
+  padding: .5rem;
+  position: relative;
+  text-transform: capitalize;
   transform: translate(-1500px, -1500px); /* eerst alle letters buiten beeld plaatsen */
 }
 
@@ -71,11 +61,11 @@ body {
 }
 
 .letter::after {
+  bottom: 0.5em;
   content: attr(data-waarde);
+  font-size: 50%;
   position: absolute;
   right: 0.5em;
-  bottom: 0.5em;
-  font-size: 50%;
 }
 
 .letter:hover {
@@ -334,7 +324,6 @@ body {
 
 [data-bonus="ster"]::before {
   content: '';
-  /*background-color: transparent;*/
   background-image: url(../images/ster.svg);
   background-size: contain;
   block-size: 4rem;
