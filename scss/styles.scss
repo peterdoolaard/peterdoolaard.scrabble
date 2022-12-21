@@ -1,17 +1,28 @@
+@font-face {
+  font-family: Montserrat;
+  src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype') tech('variations'),
+  url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 300 700;
+}
+
 :root {
-	font-size: min(1.55vmin, 23px);
+	font-size: 1.55vmin;
 	display: block;
 }
 
 body {
-	/*display: flex;*/
-	/*flex-flow: wrap;*/
 	margin: 0;
 	overflow-x: hidden;
-	/*place-content: center;*/
+
+  @supports (font-variation-settings: 'wght' 500) {
+    font-family: Montserrat;
+  }
+
 }
 
 .site-header {
+  font-family: monospace;
+  font-weight: 400;
 
 	span {
 		display: block;
@@ -21,11 +32,13 @@ body {
 
 
 
-/* grid styles */
+/* scrabble styles */
 
 .buitengrid {
 	display: grid; /* zodat speelbord en letterbord op elkaar kunnen liggen */
-	grid-template-columns: minmax(310px, 1fr);
+  font-family: "Times New Roman", Times, sans-serif!important;
+  font-size: 1.55vmin!important;
+  grid-template-columns: minmax(310px, 1fr);
 	grid-template-rows: minmax(310px, 1fr);
 	margin: 2px;
 }
@@ -91,6 +104,8 @@ body {
 	opacity: 1;
 	transition: opacity .2s ease-in-out;
 }
+
+/* de woorden */
 
 /* freelance */
 
@@ -271,55 +286,39 @@ body {
 	animation: drop-letter .5s ease-in-out 6.8s forwards;
 }
 
-/* peter@ */
+/* hi@ */
 
 .letter:nth-child(35) {
-	grid-area: 4 / 2;
+	grid-area: 7 / 2;
 	animation: drop-letter .5s ease-in-out 7.0s forwards;
 }
 
 .letter:nth-child(36) {
-	grid-area: 5 / 2;
+	grid-area: 8 / 2;
 	animation: drop-letter .5s ease-in-out 7.2s forwards;
 }
 
 .letter:nth-child(37) {
-	grid-area: 6 / 2;
-	animation: drop-letter .5s ease-in-out 7.4s forwards;
-}
-
-.letter:nth-child(38) {
-	grid-area: 7 / 2;
-	animation: drop-letter .5s ease-in-out 7.5s forwards;
-}
-
-.letter:nth-child(39) {
-	grid-area: 8 / 2;
-	animation: drop-letter .5s ease-in-out 7.6s forwards;
-}
-
-.letter:nth-child(40) {
 	grid-area: 9 / 2;
-	animation: drop-letter .5s ease-in-out 7.8s forwards;
+	animation: drop-letter .5s ease-in-out 7.4s forwards;
 }
 
 /* .nl */
 
-.letter:nth-child(41) {
-	grid-area: 10 / 15;
-	animation: drop-letter .5s ease-in-out 8.1s forwards;
+.letter:nth-child(38) {
+  grid-area: 10 / 15;
+  animation: drop-letter .5s ease-in-out 7.5s forwards;
 }
 
-.letter:nth-child(42) {
-	grid-area: 11 / 15;
-	animation: drop-letter .5s ease-in-out 8.3s forwards;
+.letter:nth-child(39) {
+  grid-area: 11 / 15;
+  animation: drop-letter .5s ease-in-out 7.6s forwards;
 }
 
-.letter:nth-child(43) {
-	grid-area: 12 / 15;
-	animation: drop-letter .5s ease-in-out 8.5s forwards;
+.letter:nth-child(40) {
+  grid-area: 12 / 15;
+  animation: drop-letter .5s ease-in-out 7.8s forwards;
 }
-
 
 /* animatie van de letters */
 @keyframes drop-letter {
