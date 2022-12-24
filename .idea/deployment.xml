@@ -3,13 +3,6 @@
   <component name="PublishConfigData" serverName="Handboek" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="Handboek">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/../handboek-html-css.nl.2022" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
       <paths name="Peterdoolaard">
         <serverdata>
           <mappings>

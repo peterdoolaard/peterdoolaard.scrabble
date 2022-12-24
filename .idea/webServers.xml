@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="515e774d-7a1e-43b6-b9d2-5b04981335d0" name="Peterdoolaard" url="https://peterdoolaard.nl">
+        <fileTransfer rootFolder="/domains/peterdoolaard.nl/public_html" accessType="FTPS" host="ftp.peterdoolaard.nl" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
